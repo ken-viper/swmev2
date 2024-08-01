@@ -1,0 +1,79 @@
+query ProfileDopes($where: DopeWhereInput, $orderBy: DopeOrder, $first: Int, $after: Cursor) {
+  dopes(where: $where, first: $first, after: $after, orderBy: $orderBy) {
+    totalCount
+    edges {
+      node {
+        id
+        id
+        rank
+        score
+        claimed
+        opened
+        bestAskPriceEth
+        items {
+          id
+          fullname
+          type
+          name
+          tier
+          greatness
+          count
+          suffix
+        }
+      }
+    }
+    pageInfo {
+      endCursor
+      hasNextPage
+    }
+  }
+}
+
+query ProfileHustlers($where: HustlerWhereInput, $orderBy: HustlerOrder, $first: Int, $after: Cursor) {
+  hustlers(where: $where, first: $first, after: $after, orderBy: $orderBy) {
+    totalCount
+    edges {
+      node {
+        id
+        name
+        svg
+        title
+        type
+        bestAskPriceEth
+      }
+    }
+    pageInfo {
+      endCursor
+      hasNextPage
+    }
+  }
+}
+
+query ProfileGear($where: WalletItemsWhereInput, $first: Int, $after: Cursor) {
+  walletItems(where: $where, first: $first, after: $after) {
+    totalCount
+    edges {
+      node {
+        id
+        balance
+        item {
+          bestAskPriceEth
+          id
+          count
+          fullname
+          name
+          svg
+          suffix
+          type
+          base {
+            svg
+          }
+        }
+      }
+    }
+    pageInfo {
+      endCursor
+      hasNextPage
+    }
+  }
+}

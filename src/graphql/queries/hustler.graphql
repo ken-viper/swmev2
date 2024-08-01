@@ -1,0 +1,264 @@
+query Hustler($where: HustlerWhereInput) {
+  hustlers(where: $where) {
+    totalCount
+    edges {
+      node {
+        id
+        title
+        name
+        type
+        title
+        color
+        background
+        age
+        sex
+        svg
+        viewbox
+        order
+        neck {
+          id
+          type
+          name
+          suffix
+          augmented
+          tier
+          greatness
+          count
+          fullname
+          svg
+          rles {
+            male
+            female
+          }
+          base {
+            svg
+            rles {
+              male
+              female
+            }
+          }
+        }
+
+        ring {
+          id
+          type
+          name
+          suffix
+          augmented
+          tier
+          greatness
+          count
+          fullname
+          svg
+          rles {
+            male
+            female
+          }
+          base {
+            svg
+            rles {
+              male
+              female
+            }
+          }
+        }
+        accessory {
+          id
+          type
+          name
+          suffix
+          augmented
+          tier
+          greatness
+          count
+          fullname
+          svg
+          rles {
+            male
+            female
+          }
+          base {
+            svg
+            rles {
+              male
+              female
+            }
+          }
+        }
+        body {
+          id
+          rle
+        }
+        hair {
+          id
+          rle
+        }
+        beard {
+          id
+          rle
+        }
+        drug {
+          id
+          type
+          name
+          suffix
+          augmented
+          tier
+          greatness
+          count
+          fullname
+          svg
+          rles {
+            male
+            female
+          }
+          base {
+            svg
+            rles {
+              male
+              female
+            }
+          }
+        }
+        hand {
+          id
+          type
+          name
+          suffix
+          augmented
+          tier
+          greatness
+          count
+          fullname
+          svg
+          rles {
+            male
+            female
+          }
+          base {
+            svg
+            rles {
+              male
+              female
+            }
+          }
+        }
+        weapon {
+          id
+          type
+          name
+          suffix
+          augmented
+          tier
+          greatness
+          count
+          fullname
+          svg
+          rles {
+            male
+            female
+          }
+          base {
+            svg
+            rles {
+              male
+              female
+            }
+          }
+        }
+        clothes {
+          id
+          type
+          name
+          suffix
+          augmented
+          tier
+          greatness
+          count
+          fullname
+          svg
+          rles {
+            male
+            female
+          }
+          base {
+            svg
+            rles {
+              male
+              female
+            }
+          }
+        }
+        vehicle {
+          id
+          type
+          name
+          suffix
+          augmented
+          tier
+          greatness
+          count
+          fullname
+          svg
+          rles {
+            male
+            female
+          }
+          base {
+            svg
+            rles {
+              male
+              female
+            }
+          }
+        }
+        waist {
+          id
+          type
+          name
+          suffix
+          augmented
+          tier
+          greatness
+          count
+          fullname
+          svg
+          rles {
+            male
+            female
+          }
+          base {
+            svg
+            rles {
+              male
+              female
+            }
+          }
+        }
+        foot {
+          id
+          type
+          name
+          suffix
+          augmented
+          tier
+          greatness
+          count
+          fullname
+          svg
+          rles {
+            male
+            female
+          }
+          base {
+            svg
+            rles {
+              male
+              female
+            }
+          }
+        }
+      }
+    }
+  }
+}
