@@ -23,6 +23,10 @@ type WindowTitleBarProps = {
   hideWalletAddress?: boolean;
 };
 
+type paper = {
+  balanceOf: (address: string) => Promise<bigint>;
+}
+
 const WalletBalance = ({
   address,
   router,
@@ -36,16 +40,16 @@ const WalletBalance = ({
     address,
     chainId: 1,
   });
-  const paper = usePaper();
+  const paper: paper = usePaper();
 
   useEffect(() => {
     let isMounted = true;
     if (address) {
-      paper.balanceOf(address).then(value => {
+      paper.balanceOf(address).then((value: bigint) => {
         if (isMounted) setBalance(value);
       })
-      .catch(error => {
-        console.error('Error fetching balance:',error);
+      .catch((error:any) => {
+        console.error('Error fetching balance', error);
       });
     }
     return () => {
