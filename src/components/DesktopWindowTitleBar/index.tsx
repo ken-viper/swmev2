@@ -43,6 +43,9 @@ const WalletBalance = ({
     if (address) {
       paper.balanceOf(address).then(value => {
         if (isMounted) setBalance(value);
+      })
+      .catch(error => {
+        console.error('Error fetching balance:',error);
       });
     }
     return () => {
